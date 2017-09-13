@@ -20,6 +20,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.record.conc.disabled=false \
     vendor.voice.voip.conc.disabled=true \
     vendor.voice.conc.fallbackpath=deep-buffer \
+    ro.af.client_heap_size_kbyte=7168 \
     vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio_hal.period_size=192 \
     ro.vendor.audio.sdk.ssr=false \
