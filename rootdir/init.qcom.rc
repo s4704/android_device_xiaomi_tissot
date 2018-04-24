@@ -63,6 +63,21 @@ on early-boot
     chown root audio /sys/kernel/boot_adsp/boot
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
     write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    chown root audio /sys/kernel/boot_adsp/boot
+
+    # Graphics
+    chown system graphics /sys/class/graphics/fb0/idle_time
+    chmod 0664 /sys/class/graphics/fb0/idle_time
+    chown system graphics /sys/class/graphics/fb0/dynamic_fps
+    chmod 0664 /sys/class/graphics/fb0/dynamic_fps
+    chown system graphics /sys/class/graphics/fb0/dyn_pu
+    chmod 0664 /sys/class/graphics/fb0/dyn_pu
+    chown system graphics /sys/class/graphics/fb0/modes
+    chmod 0664 /sys/class/graphics/fb0/modes
+    chown system graphics /sys/class/graphics/fb0/mode
+    chmod 0664 /sys/class/graphics/fb0/mode
+    chown system graphics /sys/class/graphics/fb0/msm_cmd_autorefresh_en
+    chmod 0664 /sys/class/graphics/fb0/msm_cmd_autorefresh_en
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -228,6 +243,9 @@ on post-fs-data
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
 
+    # Create directory for voiceprint
+    mkdir /data/misc/qvop 0771 system system
+
     #Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
 
@@ -238,6 +256,7 @@ on post-fs-data
     mkdir /data/vendor/tombstones 0771 system system
 
     mkdir /data/vendor/ramdump 0771 root system
+    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
@@ -468,7 +487,7 @@ service cnd /system/vendor/bin/cnd
 service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
     class main
     user system
-    group system
+    group radio system
     writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
@@ -538,10 +557,16 @@ service ipacm-diag /system/vendor/bin/ipacm-diag
     group radio diag oem_2901
     writepid /dev/cpuset/system-background/tasks
 
+service ipacm /system/vendor/bin/ipacm
+    class main
+    user radio
+    group radio inet
+    writepid /dev/cpuset/system-background/tasks
+
 service qti /system/vendor/bin/qti
     class main
     user radio
-    group radio diag usb net_admin
+    group radio oem_2901 diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /vendor/bin/sensors.qcom
