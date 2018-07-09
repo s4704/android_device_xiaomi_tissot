@@ -738,3 +738,6 @@ on property:sys.fp.vendor=goodix
 
 on property:sys.fp.vendor=FPC
    setprop ro.boot.fpsensor fpc
+
+on property:dev.bootcomplete=1
+    setprop sys.io.scheduler "bfq"
