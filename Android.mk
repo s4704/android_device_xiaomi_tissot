@@ -36,7 +36,7 @@ $(DSP_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 # Build Tissot Manager stuff for TWRP recovery ramdisk
 ifeq ($(WITH_TWRP),true)
-BOARD_RECOVERY_IMAGE_PREPARE := $(DEVICE_PATH)/recovery/recovery_inject.sh "$(TARGET_RECOVERY_ROOT_OUT)"
+BOARD_RECOVERY_IMAGE_PREPARE := $(DEVICE_PATH)/twrp/recovery_inject.sh "$(TARGET_RECOVERY_ROOT_OUT)"
 endif
 
 ALL_DEFAULT_INSTALLED_MODULES += $(DSP_SYMLINK)
