@@ -377,7 +377,7 @@ function start_hbtp()
         # Start the Host based Touch processing but not in the power off mode.
         bootmode=`getprop ro.bootmode`
         if [ "charger" != $bootmode ]; then
-                start hbtp
+                start vendor.hbtp
         fi
 }
 
@@ -1525,7 +1525,7 @@ case "$target" in
                 case "$soc_id" in
                         "277" | "278")
                         # Start energy-awareness for 8976
-                        start energy-awareness
+                        start vendor.energy-awareness
                 ;;
                 esac
 
@@ -2691,7 +2691,7 @@ case "$target" in
 	fi
 	echo N > /sys/module/lpm_levels/parameters/sleep_disabled
         # Starting io prefetcher service
-        start iop
+        start vendor.iop
 
         # Set Memory parameters
         configure_memory_parameters
@@ -2847,7 +2847,7 @@ case "$target" in
 	echo 5 > /proc/sys/kernel/sched_spill_nr_run
 	echo 1 > /proc/sys/kernel/sched_restrict_cluster_spill
         echo 1 > /proc/sys/kernel/sched_prefer_sync_wakee_to_waker
-	start iop
+	start vendor.iop
 
         # disable thermal bcl hotplug to switch governor
         echo 0 > /sys/module/msm_thermal/core_control/enabled
@@ -3120,7 +3120,7 @@ esac
 # Post-setup services
 case "$target" in
     "msm8660" | "msm8960" | "msm8226" | "msm8610" | "mpq8092" )
-        start mpdecision
+        start vendor.mpdecision
     ;;
     "msm8916")
         setprop sys.post_boot.parsed 1
@@ -3168,11 +3168,11 @@ case "$target" in
         low_ram_enable=`getprop ro.config.low_ram`
 
         if [ "$low_ram_enable" != "true" ]; then
-        start gamed
+        start vendor.gamed
         fi
     ;;
     "msm8974")
-        start mpdecision
+        start vendor.mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
     "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845")
@@ -3180,7 +3180,7 @@ case "$target" in
     ;;
     "apq8084")
         rm /data/system/perfd/default_values
-        start mpdecision
+        start vendor.mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
         echo 512 > /sys/block/sda/bdi/read_ahead_kb
         echo 512 > /sys/block/sdb/bdi/read_ahead_kb
@@ -3199,7 +3199,7 @@ case "$target" in
         fi
         case "$soc_id" in
             "127" | "128" | "129")
-                start mpdecision
+                start vendor.mpdecision
         ;;
         esac
     ;;
@@ -3208,7 +3208,7 @@ esac
 # Enable Power modes and set the CPU Freq Sampling rates
 case "$target" in
      "msm7627a")
-        start qosmgrd
+        start vendor.qosmgrd
     echo 1 > /sys/module/pm2/modes/cpu0/standalone_power_collapse/idle_enabled
     echo 1 > /sys/module/pm2/modes/cpu1/standalone_power_collapse/idle_enabled
     echo 1 > /sys/module/pm2/modes/cpu0/standalone_power_collapse/suspend_enabled
@@ -3246,7 +3246,7 @@ fi
 # Change adj level and min_free_kbytes setting for lowmemory killer to kick in
 case "$target" in
      "msm8660")
-        start qosmgrd
+        start vendor.qosmgrd
         echo 0,1,2,4,9,12 > /sys/module/lowmemorykiller/parameters/adj
         echo 5120 > /proc/sys/vm/min_free_kbytes
      ;;
