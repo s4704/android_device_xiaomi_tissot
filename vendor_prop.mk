@@ -95,10 +95,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     debug.enable.sglscale=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=0 \
-    ro.sf.lcd_density=480
+    ro.sf.lcd_density=480 \
+    vendor.display.disable_skip_validate=1 \
+    vendor.display.enable_default_color_mode=1 \
+    vendor.display.perf_hint_window=50 \
+    vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -155,7 +158,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.sys.fw.dex2oat_thread_count=8
+    ro.sys.fw.dex2oat_thread_count=8 \
+    ro.vendor.qti.sys.fw.bg_apps_limit=60
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -215,7 +219,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-# Property to enable display default color mode
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.display.enable_default_color_mode=1
