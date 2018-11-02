@@ -227,6 +227,11 @@ BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2018-10-05
+
+# Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Treble
