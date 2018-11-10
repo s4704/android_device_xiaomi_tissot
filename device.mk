@@ -431,27 +431,23 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libcld80211 \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
     hostapd \
-    hostapd_cli \
     dhcpcd.conf \
-    libwifi-hal-qcom \
+    wificond \
     wpa_supplicant \
     wpa_supplicant.conf \
     libcurl
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0 \
-    android.hardware.wifi@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat
 
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
