@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Jack server heap size
+export ANDROID_JACK_VM_ARGS += "-Xmx3072m"
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Gapps
