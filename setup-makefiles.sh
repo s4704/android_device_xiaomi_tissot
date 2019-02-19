@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=tissot
-VENDOR=xiaomi
+DEVICE=m1721
+VENDOR=meizu
 
 INITIAL_COPYRIGHT_YEAR=2017
 

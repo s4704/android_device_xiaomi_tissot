@@ -14,9 +14,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/tissot
+LOCAL_PATH := device/meizu/m1721
 
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+
+# Asserts
+TARGET_OTA_ASSERT_DEVICE := m6note,m6n,m1721,M1721,M6Note
 
 # Architecture
 TARGET_ARCH := arm64
@@ -113,7 +116,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw \
-    device/xiaomi/tissot/cmhw
+    device/meizu/m1721/cmhw
 
 # CNE / DPM
 BOARD_USES_QCNE := true
@@ -161,9 +164,9 @@ TARGET_NO_RPC := true
 TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(LOCAL_PATH)/android_filesystem_config.h
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_tissot
+TARGET_INIT_VENDOR_LIB := libinit_m1721
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_tissot
+TARGET_RECOVERY_DEVICE_MODULES := libinit_m1721
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
@@ -227,4 +230,4 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 
 # Inherit from the proprietary version
--include vendor/xiaomi/tissot/BoardConfigVendor.mk
+-include vendor/meizu/m1721/BoardConfigVendor.mk

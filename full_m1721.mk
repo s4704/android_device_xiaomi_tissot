@@ -18,13 +18,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from tissot_sprout device
-$(call inherit-product, device/xiaomi/tissot/device.mk)
+# Inherit from m1721_sprout device
+$(call inherit-product, device/meizu/m1721/device.mk)
 
 # Device identifier. This must come after all inclusions
-TARGET_VENDOR := Xiaomi
-PRODUCT_DEVICE := tissot
-PRODUCT_NAME := full_tissot
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi A1
-PRODUCT_MANUFACTURER := Xiaomi
+TARGET_VENDOR := Meizu
+PRODUCT_DEVICE := m1721
+PRODUCT_NAME := full_m1721
+PRODUCT_BRAND := Meizu
+PRODUCT_MODEL := M6 Note
+PRODUCT_MANUFACTURER := Meizu

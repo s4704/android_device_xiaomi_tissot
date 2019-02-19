@@ -14,16 +14,16 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/xiaomi/tissot/full_tissot.mk)
+$(call inherit-product, device/meizu/m1721/full_m1721.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_tissot
-BOARD_VENDOR := Xiaomi
+PRODUCT_NAME := lineage_m1721
+BOARD_VENDOR := Meizu
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-meizu
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="xiaomi/tissot/tissot_sprout:7.1.2/N2G47H/7.12.19:user/release-keys" \
-    PRIVATE_BUILD_DESC="tissot-user 7.1.2 N2G47H 7.12.19 release-keys"
+    BUILD_FINGERPRINT="Meizu/meizu_M6Note/M6Note:7.1.2/N2G47H/m1721.Flyme_7.0.1539977208:user/release-keys" \
+    PRIVATE_BUILD_DESC="meizu_M6Note-user 7.1.2 N2G47H m1721.Flyme_7.0.1539977208 release-keys"
