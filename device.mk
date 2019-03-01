@@ -218,7 +218,12 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.factory.rc \
+    init.qcom.sensors.sh \
+    init.qcom.syspart_fixup.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
