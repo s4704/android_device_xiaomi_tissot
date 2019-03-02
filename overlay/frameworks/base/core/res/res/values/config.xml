@@ -46,31 +46,26 @@
          backlight values for LUX levels between these control points.
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-    	
-         <item>1</item>
-         <item>2</item>
-         <item>3</item>
-         <item>4</item>
-         <item>5</item>
-         <item>6</item>
-         <item>8</item>
-         <item>13</item>
-         <item>17</item>
-         <item>21</item>
-         <item>26</item>
-         <item>30</item>
-         <item>34</item>
-         <item>140</item>
-         <item>310</item>
-         <item>400</item>
-         <item>500</item>
-         <item>600</item>
-         <item>1000</item>
-         <item>1200</item>
-         <item>1500</item>
-         <item>3000</item>
-         <item>3500</item>
-         <item>4000</item>
+        <item>2</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>85</item>
+        <item>116</item>
+        <item>128</item>
+        <item>256</item>
+        <item>384</item>
+        <item>512</item>
+        <item>640</item>
+        <item>768</item>
+        <item>896</item>
+        <item>1108</item>
+        <item>2048</item>
+        <item>4096</item>
+        <item>6144</item>
+        <item>8192</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -79,31 +74,27 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-         <item>2</item>
-         <item>2</item>
-         <item>2</item>
-         <item>3</item>
-         <item>3</item>
-         <item>5</item>
-         <item>5</item>
-         <item>12</item>
-         <item>12</item>
-         <item>20</item>
-         <item>20</item>
-         <item>39</item>
-         <item>39</item>
-         <item>43</item>
-         <item>43</item>
-         <item>55</item>
-         <item>55</item>
-         <item>63</item>
-         <item>63</item>
-         <item>84</item>
-         <item>93</item>
-         <item>105</item>
-         <item>200</item>
-         <item>240</item>
-         <item>255</item>
+        <item>47</item>
+        <item>47</item>
+        <item>89</item>
+        <item>92</item>
+        <item>95</item>
+        <item>97</item>
+        <item>102</item>
+        <item>107</item>
+        <item>112</item>
+        <item>117</item>
+        <item>125</item>
+        <item>130</item>
+        <item>137</item>
+        <item>147</item>
+        <item>157</item>
+        <item>172</item>
+        <item>192</item>
+        <item>242</item>
+        <item>242</item>
+        <item>255</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Screen brightness used to dim the screen when the user activity
