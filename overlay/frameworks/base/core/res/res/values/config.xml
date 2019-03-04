@@ -368,7 +368,4 @@
          Otherwise, the buttons will light up whenever the user interacts with the device -->
     <bool name="config_buttonLightOnKeypressOnly">true</bool>
 
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
-
 </resources>
