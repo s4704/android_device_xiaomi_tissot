@@ -19,10 +19,6 @@ export ANDROID_JACK_VM_ARGS += "-Xmx3072m"
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Gapps
-#GAPPS_VARIANT := nano
-#$(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
-
 # Vendors
 $(call inherit-product, vendor/meizu/m1721/m1721-vendor.mk)
 
