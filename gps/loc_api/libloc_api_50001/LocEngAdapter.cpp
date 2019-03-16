@@ -195,11 +195,9 @@ void LocEngAdapter::setXtraUserAgent() {
                 fclose(file);
 
                 // remove trailing spaces
-                char *s;
-                s = buf + strlen(buf);
-                while (--s >= buf) {
-                    if (!isspace(*s)) break;
-                    *s = 0;
+                size_t len = strlen(buf);
+                while (--len >= 0 && isspace(buf[len])) {
+                    buf[len] = '\0';
                 }
             }
 
@@ -271,6 +269,9 @@ void LocInternalAdapter::setUlpProxy(UlpProxyBase* ulp) {
         virtual void proc() const {
             LOC_LOGV("%s] ulp %p adapter %p", __func__,
                      mUlp, mAdapter);
+            if (mUlp) {
+                mUlp->setCapabilities(ContextBase::getCarrierCapabilities());
+            }
             mAdapter->setUlpProxy(mUlp);
         }
     };
