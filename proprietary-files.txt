@@ -173,24 +173,8 @@ vendor/lib/libremosaiclib.so
 vendor/lib/libremosaic_tuning.so
 
 # Camera actuators
-vendor/lib/libactuator_dw9763.so
-vendor/lib/libactuator_ad5816g.so
-vendor/lib/libactuator_ad5823.so
-vendor/lib/libactuator_ak7345.so
 vendor/lib/libactuator_ak7371.so
-vendor/lib/libactuator_ak7371_primax.so
-vendor/lib/libactuator_ak7374.so
-vendor/lib/libactuator_bu64244gwz.so
-vendor/lib/libactuator_bu64297.so
-vendor/lib/libactuator_dw9714.so
-vendor/lib/libactuator_dw9716.so
-vendor/lib/libactuator_dw9761b.so
-vendor/lib/libactuator_lc898122.so
-vendor/lib/libactuator_lc898212xd.so
-vendor/lib/libactuator_lc898212xd_qc2002.so
 vendor/lib/libactuator_lc898217xc.so
-vendor/lib/libactuator_pseudo.so
-vendor/lib/libactuator_rohm_bu64243gwz.so
 
 # Camera app modules
 vendor/lib/libjni_dualcamera.so
@@ -288,49 +272,42 @@ vendor/lib/libchromatix_s5k4e8_preview.so
 vendor/lib/libchromatix_s5k4e8_snapshot.so
 vendor/lib/libchromatix_s5k4e8_zsl_preview.so
 vendor/lib/libchromatix_s5k4e8_zsl_video.so
+vendor/lib/libchromatix_c5490_a3_default_preview.so
+vendor/lib/libchromatix_c5490_a3_default_video.so
+vendor/lib/libchromatix_c5490_a3_hfr_120.so
+vendor/lib/libchromatix_c5490_a3_hfr_60.so
+vendor/lib/libchromatix_c5490_a3_hfr_90.so
+vendor/lib/libchromatix_c5490_common.so
+vendor/lib/libchromatix_c5490_cpp_ds_chromatix.so
+vendor/lib/libchromatix_c5490_cpp_hfr_120.so
+vendor/lib/libchromatix_c5490_cpp_hfr_60.so
+vendor/lib/libchromatix_c5490_cpp_hfr_90.so
+vendor/lib/libchromatix_c5490_cpp_liveshot.so
+vendor/lib/libchromatix_c5490_cpp_preview.so
+vendor/lib/libchromatix_c5490_cpp_snapshot.so
+vendor/lib/libchromatix_c5490_cpp_us_chromatix.so
+vendor/lib/libchromatix_c5490_cpp_video.so
+vendor/lib/libchromatix_c5490_default_video.so
+vendor/lib/libchromatix_c5490_hfr_120.so
+vendor/lib/libchromatix_c5490_hfr_60.so
+vendor/lib/libchromatix_c5490_hfr_90.so
+vendor/lib/libchromatix_c5490_postproc.so
+vendor/lib/libchromatix_c5490_preview.so
+vendor/lib/libchromatix_c5490_snapshot.so
+vendor/lib/libchromatix_c5490_zsl_preview.so
+vendor/lib/libchromatix_c5490_zsl_video.so
 
 # Camera configs
 etc/camera/s5k4e8_chromatix.xml
 etc/camera/s5k3p3sm_chromatix.xml
 etc/camera/imx362_chromatix_bear.xml
 etc/camera/imx362_chromatix.xml
-etc/camera/csidtg_camera.xml
 etc/camera/camera_config.xml
 
 # Camera eeproms
-vendor/lib/libmmcamera_eeprom_util.so
-vendor/lib/libmmcamera_atmel_at24c32e_eeprom.so
-vendor/lib/libmmcamera_dw9761b_2d_eeprom.so
-vendor/lib/libmmcamera_gt24c64a_imx362_eeprom.so
 vendor/lib/libmmcamera_gt24c64a_imx362_s5k2l7_eeprom.so
 vendor/lib/libmmcamera_gt24c64a_s5k3p8sp03_eeprom.so
 vendor/lib/libmmcamera_gt24c64a_s5k4e8_eeprom.so
-vendor/lib/libmmcamera_imx258_gt24c16_eeprom.so
-vendor/lib/libmmcamera_imx258_gt24c32_eeprom.so
-vendor/lib/libmmcamera_imx258_mono_gt24c32_eeprom.so
-vendor/lib/libmmcamera_le2464c_eeprom.so
-vendor/lib/libmmcamera_le2464c_master_eeprom.so
-vendor/lib/libmmcamera_ofilm_s5k3p3_le2464_eeprom.so
-vendor/lib/libmmcamera_onsemi_cat24c16_eeprom.so
-vendor/lib/libmmcamera_onsemi_cat24c32_eeprom.so
-vendor/lib/libmmcamera_onsemi_cat24c32_imx362_eeprom.so
-vendor/lib/libmmcamera_ov4688_eeprom.so
-vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so
-vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so
-vendor/lib/libmmcamera_rohm_brcg064gwz_3_eeprom.so
-vendor/lib/libmmcamera_sony_imx214_eeprom.so
-vendor/lib/libmmcamera_sony_imx298_eeprom.so
-vendor/lib/libmmcamera_sony_imx378_eeprom.so
-vendor/lib/libmmcamera_sonyimx135_eeprom.so
-vendor/lib/libmmcamera_sunny_8856_eeprom.so
-vendor/lib/libmmcamera_sunny_8865_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64_imx298_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64_s5k2l7_eeprom.so
-vendor/lib/libmmcamera_sunny_gt24c64a_imx362_eeprom.so
-vendor/lib/libmmcamera_sunny_q13v06k_eeprom.so
-vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
-vendor/lib/libmmcamera_truly_cma481_eeprom.so
-vendor/lib/libmmcamera_truly_cmb433_eeprom.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
