@@ -444,6 +444,11 @@ vendor/lib64/libsecureuisvc_jni.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
+# Display Color Calibration
+etc/permissions/com.qti.snapdragon.sdk.display.xml
+-framework/com.qti.snapdragon.sdk.display.jar
+-vendor/app/colorservice/colorservice.apk
+
 # Display calibration
 -etc/qdcm_calib_data_hx8399c_holitech_1080p_video_mode_dsi_panel.xml
 -etc/qdcm_calib_data_hx8399c_tcl_1080p_video_mode_dsi_panel.xml
@@ -728,7 +733,6 @@ vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
 # Postprocessing
-framework/com.qti.snapdragon.sdk.display.jar
 vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
